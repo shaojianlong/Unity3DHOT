@@ -1,0 +1,33 @@
+# Run from the repository root with: docker compose -p unity3dhot-test -f deploy/compose.test.yml ...
+# The root .dockerignore excludes .env and .data; no production volumes or credentials are mounted.
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: aihot
+      POSTGRES_PASSWORD: isolated-test-only
+      POSTGRES_DB: gamehot_test
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U aihot -d gamehot_test"]
+      interval: 3s
+      timeout: 5s
+      retries: 30
+  checks:
+    image: unity3dhot-checks:local
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile.test
+      args:
+        NPM_REGISTRY: ${NPM_REGISTRY:-https://registry.npmjs.org}
+    environment:
+      DATABASE_URL: postgres://aihot:isolated-test-only@db:5432/gamehot_test
+      FEISHU_CONTENT_PUSH_ENABLED: "false"
+      FEISHU_INTERNAL_ENABLED: "false"
+      INDEXNOW_SUBMIT_ENABLED: "false"
+    depends_on:
+      db:
+        condition: service_healthy
+    command: ["npm", "test"]
+networks:
+  default:
+    internal: true

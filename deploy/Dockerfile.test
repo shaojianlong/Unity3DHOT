@@ -1,0 +1,14 @@
+FROM node:24-trixie-slim
+WORKDIR /app
+RUN apt-get update && apt-get install -y --no-install-recommends postgresql-client ca-certificates git && rm -rf /var/lib/apt/lists/*
+ARG NPM_REGISTRY=https://registry.npmjs.org
+COPY package.json package-lock.json ./
+COPY apps/api/package.json apps/api/
+COPY apps/web/package.json apps/web/
+COPY apps/worker/package.json apps/worker/
+COPY packages/backend/package.json packages/backend/
+COPY packages/contracts/package.json packages/contracts/
+COPY industry/package.json industry/
+COPY site/package.json site/
+RUN npm ci --no-audit --no-fund --registry=${NPM_REGISTRY}
+COPY . .
