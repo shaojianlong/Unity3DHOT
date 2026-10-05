@@ -2,336 +2,319 @@
   "groups": [
     {
       "key": "company",
-      "name": "公司与模型",
-      "blurb": "按厂商追踪模型、产品与公司动态"
+      "name": "公司与工作室",
+      "blurb": "引擎、图形技术机构与独立游戏工作室"
     },
     {
       "key": "field",
-      "name": "技术方向",
-      "blurb": "按技术领域深挖：Agent、多模态、具身智能……"
+      "name": "制作与技术方向",
+      "blurb": "Unity、渲染、3D 管线与性能优化"
     },
     {
       "key": "genre",
       "name": "内容形态",
-      "blurb": "按内容类型浏览：论文、教程、观点、政策……"
+      "blurb": "技术拆解、开发复盘与有证据的商业案例"
     }
   ],
   "topics": [
     {
-      "slug": "openai",
-      "name": "OpenAI / ChatGPT",
+      "slug": "unity",
+      "name": "Unity",
       "group": "company",
-      "entityId": "openai",
-      "definition": "OpenAI 的全部动态：GPT 系列模型、ChatGPT 与 Sora 产品、公司战略与人事的持续追踪。"
+      "entityId": "unity",
+      "definition": "以 Unity 为主体的游戏制作、工具和公开项目进展；仅使用其工具不等于该机构发布新闻。"
     },
     {
-      "slug": "anthropic",
-      "name": "Anthropic / Claude",
+      "slug": "epic",
+      "name": "Epic Games",
       "group": "company",
-      "entityId": "anthropic",
-      "definition": "Anthropic 的全部动态：Claude 系列模型、Claude Code、安全研究路线与公司进展的持续追踪。"
+      "entityId": "epic",
+      "definition": "以 Epic Games 为主体的游戏制作、工具和公开项目进展；仅使用其工具不等于该机构发布新闻。"
     },
     {
-      "slug": "google",
-      "name": "Google / Gemini",
+      "slug": "valve",
+      "name": "Valve",
       "group": "company",
-      "entityId": "google",
-      "aliases": [
-        "DeepMind"
-      ],
-      "definition": "Google 与 DeepMind 的 AI 动态：Gemini 系列、Veo 视频模型、研究成果与产品生态的持续追踪。"
-    },
-    {
-      "slug": "deepseek",
-      "name": "DeepSeek",
-      "group": "company",
-      "entityId": "deepseek",
-      "definition": "DeepSeek（深度求索）的模型发布、开源权重、技术报告与 API 价格变化。"
-    },
-    {
-      "slug": "qwen",
-      "name": "千问 Qwen",
-      "group": "company",
-      "entityId": "qwen",
-      "definition": "阿里千问 Qwen 系列的开源发布与迭代：从旗舰模型到端侧小模型的全谱系动态。"
-    },
-    {
-      "slug": "kimi",
-      "name": "Kimi / 月之暗面",
-      "group": "company",
-      "entityId": "kimi",
-      "definition": "月之暗面 Kimi 系列模型与产品动态：K 系列开源模型、长上下文技术与产品演进的追踪。"
-    },
-    {
-      "slug": "minimax",
-      "name": "MiniMax",
-      "group": "company",
-      "entityId": "minimax",
-      "definition": "MiniMax 的模型与产品动态：M 系列大模型、语音与多模态能力、开源与商业化进展。"
-    },
-    {
-      "slug": "zhipu",
-      "name": "智谱 GLM",
-      "group": "company",
-      "entityId": "zhipu",
-      "definition": "智谱的 GLM 系列模型动态：旗舰开源发布、代码与推理能力迭代、商业化与生态进展的追踪。"
-    },
-    {
-      "slug": "xai",
-      "name": "xAI / Grok",
-      "group": "company",
-      "entityId": "xai",
-      "definition": "马斯克 xAI 与 Grok 系列的全部动态：模型迭代、算力扩张与 X 平台整合的持续追踪。"
-    },
-    {
-      "slug": "meta",
-      "name": "Meta / Llama",
-      "group": "company",
-      "entityId": "meta",
-      "definition": "Meta 的 AI 动态：Llama 与 Muse 系列模型、超级智能实验室与 Meta AI 产品。"
-    },
-    {
-      "slug": "microsoft",
-      "name": "Microsoft / Copilot",
-      "group": "company",
-      "entityId": "microsoft",
-      "definition": "微软的 AI 布局：Copilot 全家桶、Azure AI 基础设施与 OpenAI 合作关系的持续追踪。"
+      "entityId": "valve",
+      "definition": "以 Valve 为主体的游戏制作、工具和公开项目进展；仅使用其工具不等于该机构发布新闻。"
     },
     {
       "slug": "nvidia",
-      "name": "NVIDIA 英伟达",
+      "name": "NVIDIA",
       "group": "company",
       "entityId": "nvidia",
-      "definition": "英伟达的 AI 芯片与生态动态：GPU 新品、CUDA 生态、机器人平台与 AI 算力市场的风向。"
+      "definition": "以 NVIDIA 为主体的游戏制作、工具和公开项目进展；仅使用其工具不等于该机构发布新闻。"
     },
     {
-      "slug": "hugging-face",
-      "name": "Hugging Face",
+      "slug": "amd",
+      "name": "AMD",
       "group": "company",
-      "entityId": "hugging-face",
-      "definition": "Hugging Face 开源社区动态：热门模型与数据集、排行榜变化与开源生态的晴雨表。"
+      "entityId": "amd",
+      "definition": "以 AMD 为主体的游戏制作、工具和公开项目进展；仅使用其工具不等于该机构发布新闻。"
     },
     {
-      "slug": "cursor",
-      "name": "Cursor",
+      "slug": "blender",
+      "name": "Blender",
       "group": "company",
-      "entityId": "cursor",
-      "definition": "Cursor（Anysphere）的编辑器与编码 Agent 动态：产品迭代、自研模型与定价变化。"
+      "entityId": "blender",
+      "definition": "以 Blender 为主体的游戏制作、工具和公开项目进展；仅使用其工具不等于该机构发布新闻。"
     },
     {
-      "slug": "openrouter",
-      "name": "OpenRouter",
+      "slug": "godot",
+      "name": "Godot",
       "group": "company",
-      "entityId": "openrouter",
-      "definition": "OpenRouter 模型路由平台动态：新模型上架、用量排行与开发者选型的真实市场信号。"
+      "entityId": "godot",
+      "definition": "以 Godot 为主体的游戏制作、工具和公开项目进展；仅使用其工具不等于该机构发布新闻。"
     },
     {
-      "slug": "agent",
-      "name": "Agent 智能体",
+      "slug": "khronos",
+      "name": "Khronos",
+      "group": "company",
+      "entityId": "khronos",
+      "definition": "以 Khronos 为主体的游戏制作、工具和公开项目进展；仅使用其工具不等于该机构发布新闻。"
+    },
+    {
+      "slug": "wube",
+      "name": "Wube",
+      "group": "company",
+      "entityId": "wube",
+      "definition": "以 Wube 为主体的游戏制作、工具和公开项目进展；仅使用其工具不等于该机构发布新闻。"
+    },
+    {
+      "slug": "suspicious-developments",
+      "name": "Suspicious Developments",
+      "group": "company",
+      "entityId": "suspicious-developments",
+      "definition": "以 Suspicious Developments 为主体的游戏制作、工具和公开项目进展；仅使用其工具不等于该机构发布新闻。"
+    },
+    {
+      "slug": "positech",
+      "name": "Positech",
+      "group": "company",
+      "entityId": "positech",
+      "definition": "以 Positech 为主体的游戏制作、工具和公开项目进展；仅使用其工具不等于该机构发布新闻。"
+    },
+    {
+      "slug": "unity-development",
+      "name": "Unity 开发",
       "group": "field",
       "tags": [
-        "Agent"
+        "Unity"
       ],
-      "definition": "让模型自主规划、调用工具、完成多步任务的技术方向——从 Claude Code、Manus 到各家 Agent 框架与评测基准的全部动态。"
+      "definition": "使用 Unity 制作游戏的技术、工具和实践，不限于 Unity 公司发布。"
     },
     {
-      "slug": "coding",
-      "name": "AI 编码",
+      "slug": "urp",
+      "name": "URP",
       "group": "field",
       "tags": [
-        "编码"
+        "URP"
       ],
-      "definition": "AI 写代码的一切：编码助手、Vibe Coding、代码模型评测与开发工作流变革。"
+      "definition": "URP 渲染管线、Render Graph、光照与平台适配。"
     },
     {
-      "slug": "reasoning",
-      "name": "推理能力",
+      "slug": "hdrp",
+      "name": "HDRP",
       "group": "field",
       "tags": [
-        "推理"
+        "HDRP"
       ],
-      "definition": "模型推理能力的进展：思维链、推理模型、数学与逻辑基准的突破与争议。"
+      "definition": "HDRP 渲染、画质与性能取舍。"
     },
     {
-      "slug": "multimodal",
-      "name": "多模态",
+      "slug": "shader",
+      "name": "Shader 着色器",
       "group": "field",
       "tags": [
-        "多模态"
+        "Shader"
       ],
-      "definition": "文本之外的能力：视觉理解、图文混合、音视频输入输出的模型与产品进展。"
+      "definition": "着色器实现、材质效果与可复用渲染方法。"
     },
     {
-      "slug": "image-gen",
-      "name": "图像生成",
+      "slug": "gpu",
+      "name": "GPU 与渲染",
       "group": "field",
       "tags": [
-        "图像生成"
+        "GPU",
+        "实时渲染"
       ],
-      "definition": "AI 画图的最前线：文生图模型迭代、图像编辑能力与创作工具生态的全部动态。"
+      "definition": "GPU 图形算法和实时渲染，关注测试条件。"
     },
     {
-      "slug": "video",
-      "name": "AI 视频",
+      "slug": "lighting",
+      "name": "光照与光追",
       "group": "field",
       "tags": [
-        "视频"
+        "光照",
+        "光线追踪"
       ],
-      "definition": "AI 视频生成与理解：文生视频模型、视频编辑工具与影视创作变革的追踪。"
+      "definition": "光照、阴影和光线追踪的实现与工程取舍。"
     },
     {
-      "slug": "voice",
-      "name": "语音与音频",
+      "slug": "optimization",
+      "name": "性能优化",
       "group": "field",
       "tags": [
-        "语音"
+        "性能优化"
       ],
-      "definition": "AI 语音与音频的进展：语音合成、实时对话、音乐生成与音频理解的模型与产品。"
+      "definition": "可复现的 CPU/GPU、内存和加载优化。"
     },
     {
-      "slug": "embodied",
-      "name": "具身智能",
+      "slug": "mobile",
+      "name": "移动端与跨平台",
       "group": "field",
       "tags": [
-        "具身智能"
+        "移动端",
+        "跨平台"
       ],
-      "definition": "AI 走进物理世界：人形机器人、具身基础模型与真实环境操作能力的进展追踪。"
+      "definition": "移动端预算、平台差异和移植实践。"
     },
     {
-      "slug": "on-device",
-      "name": "端侧 AI",
+      "slug": "technical-art",
+      "name": "技术美术与 VFX",
       "group": "field",
       "tags": [
-        "端侧"
+        "技术美术",
+        "VFX"
       ],
-      "definition": "跑在手机、电脑与边缘设备上的 AI：小模型、本地推理与端侧芯片的进展。"
+      "definition": "技术美术、美术工具、特效和制作管线。"
     },
     {
-      "slug": "open-source",
-      "name": "开源生态",
+      "slug": "procedural",
+      "name": "程序化生成",
       "group": "field",
       "tags": [
-        "开源生态",
-        "开源/仓库"
+        "程序化生成"
       ],
-      "definition": "开源模型、框架与仓库动态：权重开放、社区项目爆火、开源与闭源的力量消长。"
+      "definition": "程序化关卡、资产、地形和内容制作。"
     },
     {
-      "slug": "engineering",
-      "name": "部署工程",
+      "slug": "assets",
+      "name": "3D 资产与动画",
       "group": "field",
       "tags": [
-        "部署/工程"
+        "3D资产",
+        "动画"
       ],
-      "definition": "把模型跑起来的工程实践：推理优化、显存与成本、Serving 架构与基础设施选型。"
+      "definition": "资产生产、建模、绑定与动画流程。"
     },
     {
-      "slug": "data-training",
-      "name": "数据与训练",
+      "slug": "indie",
+      "name": "独立游戏",
       "group": "field",
       "tags": [
-        "数据/训练"
+        "独立游戏"
       ],
-      "definition": "训练侧的门道：数据集构建、合成数据、预训练与后训练方法、算力与训练成本。"
+      "definition": "小团队的制作取舍、原型和公开开发实践。"
     },
     {
-      "slug": "safety",
-      "name": "安全对齐",
+      "slug": "publishing",
+      "name": "Steam 与发行",
       "group": "field",
       "tags": [
-        "安全/对齐"
+        "Steam",
+        "发行"
       ],
-      "definition": "AI 安全与对齐：越狱与防御、模型行为研究、安全评测与治理框架的进展。"
+      "definition": "发行方法和带统计口径的公开商业结果。"
     },
     {
-      "slug": "mcp",
-      "name": "MCP 与工具调用",
+      "slug": "webgpu",
+      "name": "WebGPU",
       "group": "field",
       "tags": [
-        "MCP/工具调用"
+        "WebGPU"
       ],
-      "definition": "模型连接外部世界的协议与实践：MCP 生态、function calling、工具链集成的动态。"
+      "definition": "WebGPU 图形能力和浏览器游戏工程。"
     },
     {
-      "slug": "model-releases",
-      "name": "模型发布",
+      "slug": "ecs-dots",
+      "name": "ECS / DOTS",
+      "group": "field",
+      "tags": [
+        "ECS/DOTS"
+      ],
+      "definition": "数据导向设计与 Unity DOTS 的工程实践。"
+    },
+    {
+      "slug": "engine-releases",
+      "name": "引擎发布",
       "group": "genre",
       "tags": [
-        "模型发布"
+        "引擎发布"
       ],
-      "definition": "新模型的发布、开源与迭代：大模型厂商的旗舰更新、开源权重放出、性能与价格变化的第一时间记录。"
+      "definition": "新引擎或重要版本的正式发布，区分预告和已可用。"
     },
     {
-      "slug": "product-updates",
-      "name": "产品更新",
+      "slug": "tool-releases",
+      "name": "工具发布",
       "group": "genre",
       "tags": [
-        "产品更新"
+        "工具发布"
       ],
-      "definition": "AI 产品与应用的功能上新、改版与商业化动态——谁家的产品变强了、变贵了、能用了。"
+      "definition": "已可使用的制作工具、插件和重要更新。"
     },
     {
       "slug": "papers",
-      "name": "论文研究",
+      "name": "图形研究",
       "group": "genre",
       "tags": [
         "论文/研究"
       ],
-      "definition": "值得读的 AI 论文与研究成果：架构创新、训练方法、能力测量与理论进展的精选解读。"
+      "definition": "有明确方法、实验和适用边界的图形技术研究。"
     },
     {
       "slug": "benchmarks",
-      "name": "评测基准",
+      "name": "评测与基准",
       "group": "genre",
       "tags": [
         "评测/基准"
       ],
-      "definition": "模型到底谁强：Benchmark 成绩、评测方法论争议与排行榜变化的持续记录。"
+      "definition": "保留硬件、场景和版本的测量与对比。"
     },
     {
       "slug": "tutorials",
-      "name": "教程实践",
+      "name": "教程与实践",
       "group": "genre",
       "tags": [
         "教程/实践"
       ],
-      "definition": "拿来就能用的实操内容：提示词技巧、工作流搭建、工具用法与踩坑经验。"
+      "definition": "有步骤、前提和可验证结果的制作教程。"
+    },
+    {
+      "slug": "dev-postmortems",
+      "name": "开发复盘",
+      "group": "genre",
+      "tags": [
+        "开发复盘"
+      ],
+      "definition": "真实项目的制作流程、困难、取舍与复用经验。"
+    },
+    {
+      "slug": "business-postmortems",
+      "name": "商业复盘",
+      "group": "genre",
+      "tags": [
+        "商业复盘"
+      ],
+      "definition": "带来源和统计口径的成本、收入与发行复盘。"
+    },
+    {
+      "slug": "breakdowns",
+      "name": "技术拆解",
+      "group": "genre",
+      "tags": [
+        "技术拆解"
+      ],
+      "definition": "解释技术实现、效果来源和制作限制。"
     },
     {
       "slug": "opinions",
-      "name": "大佬观点",
+      "name": "观点与访谈",
       "group": "genre",
       "tags": [
-        "大佬观点"
+        "观点分析"
       ],
-      "definition": "行业关键人物在想什么：创始人访谈、研究者论战、投资人判断的观点集合。"
-    },
-    {
-      "slug": "trends",
-      "name": "现象与趋势",
-      "group": "genre",
-      "tags": [
-        "现象/趋势"
-      ],
-      "definition": "正在发生的行业级变化：使用习惯迁移、能力涌现、社会影响与市场格局的观察。"
-    },
-    {
-      "slug": "industry",
-      "name": "行业动态",
-      "group": "genre",
-      "tags": [
-        "行业动态"
-      ],
-      "definition": "AI 行业的商业脉搏：融资并购、人事变动、合作与竞争、政策与市场信号。"
-    },
-    {
-      "slug": "policy",
-      "name": "政策监管",
-      "group": "genre",
-      "tags": [
-        "政策/监管"
-      ],
-      "definition": "AI 相关政策法规与政府监管动态：立法进展、出口管制与全球治理框架的追踪。"
+      "definition": "基于事实的观点、访谈和制作经验分析。"
     }
   ]
 }

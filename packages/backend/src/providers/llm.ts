@@ -6,6 +6,7 @@ import type { z } from "zod";
 import { PRESETS } from "@aihot/site/models";
 import { config, credential } from "../config.ts";
 import { sha256 } from "../lib/ids.ts";
+import { guardedFetch } from "../lib/http-fetch.ts";
 import { assertAccepted, paidRequest, ProviderRejectedError, rejectReceivedResponse } from "./receipts.ts";
 
 export interface ModelSpec {
@@ -162,15 +163,38 @@ export async function chatJson<S extends z.ZodType>(opts: ChatJsonOptions<S>): P
       attemptTag: opts.attemptTag,
     },
     async () => {
+
+
+
       const started = Date.now();
-      let res: Response;
+      const url = `${baseUrl.replace(/\/$/, "")}/chat/completions`;
+      const headers = {
+        "content-type": "application/json",
+        authorization: `Bearer ${apiKey}`,
+      };
+      const payload = JSON.stringify(body);
+      const timeoutMs = opts.timeoutMs ?? 120_000;
+      let res: {
+        status: number;
+        headers: Headers;
+        text: () => string | Promise<string>;
+      };
+
       try {
-        res = await fetch(`${baseUrl.replace(/\/$/, "")}/chat/completions`, {
+        res = config.egressProxyUrl
+          ? await guardedFetch(url, {
           method: "POST",
-          headers: { "content-type": "application/json", authorization: `Bearer ${apiKey}` },
-          body: JSON.stringify(body),
-          signal: AbortSignal.timeout(opts.timeoutMs ?? 120_000),
-        });
+        headers,
+        body: payload,
+        timeoutMs,
+        route: "egress",
+      })
+    : await fetch(url, {
+        method: "POST",
+        headers,
+        body: payload,
+        signal: AbortSignal.timeout(timeoutMs),
+      });
       } catch (error) {
         if (isConnectFailure(error)) throw new ProviderRejectedError(`connect failed: ${String(error)}`, null, true);
         throw error;

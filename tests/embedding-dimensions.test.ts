@@ -41,8 +41,16 @@ async function freshProcess(dimensions: number, code: string) {
     const { cosine32 } = await import('@aihot/backend/events/recall');
     const { closeDb } = await import('@aihot/backend/db');
     try { ${code} } finally { await closeDb(); }
-  `], { env: { ...process.env, EMBEDDING_DIMS: String(dimensions) } });
-  return JSON.parse(stdout);
+  `], { env: { ...process.env, EMBEDDING_DIMS: String(dimensions),FORCE_COLOR: "0", } });
+
+
+
+    try {
+      return JSON.parse(stdout);
+    } catch (error) {
+      throw new Error(`子进程 stdout：${JSON.stringify(stdout)}`, { cause: error });
+    }
+
 }
 
 for (const oldLength of [2, 8]) test(`a stored vector of ${oldLength} dimensions is computed again at the configured 4`, async () => {
